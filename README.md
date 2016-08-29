@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  apigateway
 =============
 A performant API Gateway based on Openresty and NGINX.
@@ -270,3 +271,8 @@ docker run --name="apigateway" \
             adobeapiplatform/apigateway:latest
 ```
 
+=======
+# apigateway
+adobe api gateway  docker base image 
+#
+>>>>>>> ee3b0211074675f7f656ef73a7f4426df27a209a
