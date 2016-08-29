@@ -1,0 +1,6 @@
+require 'bundler'
+Bundler.require(:rake)
+require 'rake/clean'
+
+['builds', 'spec/fixtures'].each { |d| CLEAN.include(d) if File.exists?(d) }
+['.tmp', '.librarian'].each { |d| CLOBBER.include(d) if File.exists?(d) }
