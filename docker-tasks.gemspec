@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path("../docker-tasks/lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "docker/tools/version"
+require "docker/tasks/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "docker-tools"
-  spec.version       = Docker::Tools::VERSION
+  spec.name          = "docker-tasks"
+  spec.version       = Docker::Tasks::VERSION
   spec.authors       = ["Jon Frisby"]
   spec.email         = ["jfrisby@mrjoy.com"]
   spec.summary       = "Shared tools for Rake and Docker workflows."
@@ -23,6 +23,9 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "activesupport", "> 4.0"
   spec.add_runtime_dependency "foreman", "> 0"
   spec.add_runtime_dependency "bundler-audit", "> 0"
+  spec.add_dependency 'rspec', '~> 3'
+  spec.add_dependency 'rspec-its', '~> 1.2'
+  spec.add_dependency 'inspec', '~> 0.32.0'
   spec.add_runtime_dependency "rubocop", "> 0"
   spec.add_runtime_dependency "pry", "> 0"
   spec.add_runtime_dependency "nokogiri", "> 0"

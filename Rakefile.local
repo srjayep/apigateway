@@ -1,0 +1,5 @@
+ENV["FORCE_TAG"] = "0"
+ENV['DOCK_REPO'] = "pothus0718/pothua"
+ENV['DOCKER_REGISTRY'] = "registry.hub.docker.com"
+#ENV['DOCKER_TAG'] = "snapshot-`date +'%Y%m%d-%H%M'`"
+ENV['GIT_REPO'] = "dockerfile/ubuntu"
