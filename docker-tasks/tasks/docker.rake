@@ -36,14 +36,15 @@ load '../Rakefile.local' if File.exist?('../Rakefile.local')
   desc "Push the recently tagged Docker container from this repo.  Uses VERSION or pom.xml to"\
     " infer version, and accepts FORCE_PUSH=1 to forcibly overwrite a tag on the registry."
   task :push do
-    sh %(docker push #{dock_reg}/#{dock_repo}:#{dock_tag})
+    sh %(docker push #{dock_repo}:#{dock_tag})
   end
 
   desc "Build Docker image for release, tag it, push it to registry.  Must be performed"\
     " immediately after a release build! OR use RELEASE_VERSION=<version>"\
     " to overwrite tag to check out"
   task :release do
-    release_tag     = `git tag --list --points-at HEAD^1`.strip
+    release_tag     = `git tag --list --points-at HEAD~1`.strip
+    puts "release_tag #{release_tag}"
     release_version = release_tag.split(%r{/}).last || (ENV["RELEASE_VERSION"].strip if ENV["RELEASE_VERSION"])
     if release_version.nil? && ENV["RELEASE_VERSION"].nil?
       fail "Tag not found and RELEASE_VERSION is empty. Are you sure this is performed immediately"\
