@@ -40,9 +40,8 @@ For example, if you have an application named `hello-world` you can access it on
 
 The [discovery script](https://github.com/adobe-apiplatform/apigateway/blob/master/api-gateway-config/marathon-service-discovery.sh) is provided as an example for a quick-start and it can be replaced with your favourite discovery mechanism.
 The script updates a [configuration file](https://github.com/adobe-apiplatform/apigateway/blob/master/api-gateway-config/environment.conf.d/api-gateway-upstreams.http.conf) containing all the NGINX upstreams that are used in the [config file](https://github.com/adobe-apiplatform/apigateway/blob/master/api-gateway-config/conf.d/marathon_apis.conf#L36).
-
+Sree test
 #### Accessing a Marathon app remotely
-
 All you need to do is to create a DNS entry like `*.api.example.com` or `*.gw.example.com` and have it resolve to the nodes running the Gateway.
 
 Assuming there is an application deployed in Marathon called `hello-world` it can be accessed at the URL: `http://hello-world.api.example.com`
