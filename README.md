@@ -2,7 +2,7 @@
 =============
 A performant API Gateway based on Openresty and NGINX.
 
-Table of Contents modified by sree
+Table of Contents 
 ==================================
 
 * [Status](#status)
